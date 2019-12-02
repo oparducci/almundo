@@ -1,0 +1,71 @@
+<h3 class="visible-xs btn-mobile-filter" ng-init="isCollapsed = false" ng-click="isCollapsed = !isCollapsed">Filtrar <i ng-class="{ 'fa fa-caret-down': !isCollapsed, 'fa fa-caret-up': isCollapsed }"></i>    </h3>
+<div class="container">
+   <!-- Filtros mobile -->
+   <div class="visible-xs row hotel-filters">
+      <div ng-show="isCollapsed" class="filter filter-by-name">
+         <p class="title"><i class="icon-search" aria-hidden="true"></i> Nombre de hotel</p>
+         <form class="form-inline">
+            <div class="form-group">
+               <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" ng-model="$ctrl.hotelName">
+            </div>
+            <button class="btn btn-primay" ng-click="$ctrl.filter()">Aceptar</button>
+         </form>
+      </div>
+      <div ng-show="isCollapsed" class="filter filter-by-stars">
+         <p class="title"><i class="icon-star" aria-hidden="true"></i> Estrellas</p>
+         <form class="form-horizontal">
+            <div class="checkbox">
+               <label>
+               <input type="checkbox" ng-model="$ctrl.allStars" ng-click="$ctrl.clickAllStars();"><b>Todas las estrellas</b>
+               </label>
+            </div>
+            <div class="checkbox" ng-repeat="star in $ctrl.stars">
+               <label>
+               <input type="checkbox" ng-model="star.selected" ng-click="$ctrl.filter()">
+               <i class="fa fa-lg icon-star" aria-hidden="true" ng-repeat="ran in $ctrl.range(star.value) track by $index"></i>
+               </label>
+            </div>
+         </form>
+      </div>
+   </div>
+   <!-- Fin filtros mobile -->
+   <div class="row">
+     <div class="col-12 col-sm-4">
+        <!-- Filtros desktop y tablet -->
+        <div class="row hidden-xs hotel-filters">
+           <h3>Filtros</h3>
+           <div class="filter filter-by-name">
+              <p class="title"><i class="icon-search" aria-hidden="true"></i> Nombre de hotel</p>
+              <form class="form-inline">
+                 <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" ng-model="$ctrl.hotelName">
+                 </div>
+                 <button class="btn btn-primay" ng-click="$ctrl.filter()">Aceptar</button>
+              </form>
+           </div>
+           <div class="filter filter-by-stars">
+              <p class="title"><i class="icon-star" aria-hidden="true"></i> Estrellas</p>
+              <form class="form-horizontal">
+                 <div class="checkbox">
+                    <label>
+                    <input type="checkbox" ng-model="$ctrl.allStars" ng-click="$ctrl.clickAllStars();"><b>Todas las estrellas</b>
+                    </label>
+                 </div>
+                 <div class="checkbox" ng-repeat="star in $ctrl.stars">
+                    <label>
+                    <input type="checkbox" ng-model="star.selected" ng-click="$ctrl.filter()">
+                    <i class="fa fa-lg icon-star" aria-hidden="true" ng-repeat="ran in $ctrl.range(star.value) track by $index"></i>
+                    </label>
+                 </div>
+              </form>
+           </div>
+        </div>
+        <!-- Fin filtros desktop y tablet -->
+     </div>
+     <div class="col-12 col-sm-8">
+        <div class="alert alert-danger" ng-show="$ctrl.hotels.length == 0">Lo sentimos, no hay hoteles para las filtros seleccionados, prueba con otros filtros.</div>
+        <div class="alert alert-danger" ng-show="$ctrl.error">Lo sentimos, se ha producido un error.</div>
+        <hotel-panel ng-repeat="hotel in $ctrl.hotels" hotel="{{hotel}}"></hotel-panel>
+     </div>
+  </div>
+</div>

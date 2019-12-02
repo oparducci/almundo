@@ -1,0 +1,61 @@
+body {
+  background-color: #F4F4F4;
+}
+
+.hotel-filters {
+  margin-right: 0;
+}
+
+.hotel-filters h3 {
+  font-size: 22px;
+  margin-top: 0px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0px 1px 3px 0px rgba(119,119,119,0.3);
+}
+
+.hotel-filters .filter {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0px 1px 3px 0px rgba(119, 119, 119, 0.3);
+  margin-bottom: 10px;
+}
+
+.hotel-filters .filter .title {
+  color: #157ab1;
+  font-weight: bold;
+}
+
+.hotel-filters .filter button {
+  background-color: #002C77;
+  color: #fff;
+  box-shadow: 0 -2px 0 #00163C inset;
+}
+
+.btn-mobile-filter {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  color: #157ab1;
+}
+
+.btn-mobile-filter i {
+  margin-left:5px;
+}
+
+@media (max-width: 768px) {
+
+  .hotel-filters {
+      margin-right: 0;
+      margin-top: 10px;
+      padding: 0px !important;
+      margin-left: 0px;
+  }
+
+  .hotel-filters .filter {
+      /*margin-bottom: 0px !important;*/
+  }
+}

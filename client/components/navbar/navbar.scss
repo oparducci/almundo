@@ -1,0 +1,29 @@
+/*footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #E5E5E5;
+}
+*/
+
+.navbar-text {
+    margin-left: 15px;
+  }
+  
+  .navbar-default {
+      background-color: #0f417d;
+      border-color: #e7e7e7;
+  }
+  
+  .logo-wrapper {
+      background: url(../assets/images/logo-almundo.svg) no-repeat center left;
+      height: 100px;
+      width: 300px;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar {
+      margin-bottom:0px;
+    }
+  }
+  

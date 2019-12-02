@@ -1,0 +1,21 @@
+<div class="row hotel-item">
+    <div class="col-sm-4 col-12">
+        <img ng-src="/assets/images/hotels/{{ hotel.image }}" alt="" class="hotel-img">
+    </div>
+
+    <div class="col-sm-5 col-12">
+        <h3 class="hotel-name">{{ hotel.name }}</h3>
+        <div class="hotel-stars">
+            <i class="fa fa-2x icon-star" aria-hidden="true" ng-repeat="star in $ctrl.range(hotel.stars) track by $index"></i>
+        </div>
+        <div class="hotel-amenities">
+            <i ng-repeat="amenity in hotel.amenities" ng-class="'fa fa-2x icon-{{amenity}}'"></i>
+        </div>    
+    </div>
+
+    <div class="col-sm-3 col-12 price">
+        <small class="description">Precio por noche por habitación</small>
+        <p><em>ARS</em> {{ hotel.price }}</p>
+        <button class="btn btn-primary btn-block btn-view-hotel" href="#">Ver Hotel</button>
+    </div>
+</div>
