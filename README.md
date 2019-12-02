@@ -1,4 +1,4 @@
-# almundo
+# almundo Test
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.2.3.
 
@@ -16,14 +16,14 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 
 1. Run `npm install` to install server dependencies.
 
-2. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
+2. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready. Also execute seed wich load initial data from hotels in mongodb.
 
 3. Result
 
-- Desktop
+Desktop
 ![Alt text](client/assets/images/design/desktop.png "Almundo Desktop")
 
-- Mobile
+Mobile
 ![Alt text](client/assets/images/design/mobile.png "Almundo Mobile")
 
 ## Build & deploy
